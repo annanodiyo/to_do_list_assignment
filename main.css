@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 80vw;
+    min-height: 60vh;
+    background-color: blueviolet;
+    border-radius: 20px;
+    padding: 25px;
+}
+#todoInput{
+    height: 25px;
+    margin-bottom: 30px;
+}
+#submit{
+    height: 30px;
+    width: 40px;
+}
+#todoList{
+    display: flex;
+    align-items: column;
+}
+#statusText{
+    padding: 8px;
+    text-align: center;
+    color: black;
+}
+/*
+ul li{
+    list-style: none;
+    background-color: aliceblue;
+    width: 150px;
+} */
