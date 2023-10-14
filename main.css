@@ -18,7 +18,7 @@ body{
     min-height: 60vh;
     background-image: url(pexels-herman-io-3569757.jpg);
     background-size: contain;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     border-radius: 20px;
     padding: 25px;
     margin-top: 40px;
@@ -28,9 +28,9 @@ h1{
     font-size: large;
 }
 .mytasks{
-    background-color: antiquewhite;
-    width: 100%;
-    height: 35px;
+    /* background-color: antiquewhite; */
+    /* width: 60vw; */
+    /* height: 35px; */
     border-radius: 5px;
     padding: 3px;
 }
@@ -41,7 +41,7 @@ h1{
     margin-bottom: 30px;
     outline: none;
 }
-#submit{
+form>button{
     height: 30px;
     width: 40px;
     background-color: #023a72;

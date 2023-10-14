@@ -1,10 +1,12 @@
 const todos = [
-    // { id: 1, text: 'eat pizza', done: false},
-    // { id: 2, text: 'eat mango', done: false},
-    // { id: 3, text: 'eat pineapple', done: false}
+    { id: 1, text: 'eat pizza', done: false},
+    { id: 2, text: 'eat mango', done: false},
+    { id: 3, text: 'eat pineapple', done: false}
 ];
-const todoInput = document.getElementById('');
+const todoForm=document.querySelector('.mytask');
+const todoInput = document.getElementById('todoInput');
 const todoList = document.getElementById('todoList');
+const statusText = document.getElementById('statusText');
 function renderTodos() {
     todoList.innerHTML = "";
     todos.forEach((todo => {
@@ -31,7 +33,7 @@ function renderTodos() {
 renderTodos();
 function showStatus() {
   if (!todos.length) {
-    statusText.textContent = "You have no tasks. 😊";
+    statusText.textContent = "You have no tasks. 😊😊";
     return;
   }
 
@@ -41,7 +43,7 @@ function showStatus() {
   } else if (pending === 1) {
     statusText.textContent = "1 task remaining";
   } else {
-    statusText.textContent = `${pending} / ${todos.length} tasks remaining`;
+    statusText.textContent = `${pending} / ${todos.length} tasks remaining 😬`;
   }
 }
 
@@ -49,7 +51,7 @@ function addTodo() {
   const newTodoText = todoInput.value.trim();
   if (!newTodoText) {
     alert("Please enter a valid todo item");
-    return;
+    // return;
   }
 
   const newTodo = {
@@ -82,6 +84,7 @@ function removeTodo(id) {
   renderTodos();
 }
 
-function saveTodos() {
-  localStorage.setItem("todos", JSON.stringify(todos));
-}
+
+// function saveTodos() {
+  // localStorage.setItem("todos", JSON.stringify(todos));
+// }
