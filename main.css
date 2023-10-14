@@ -8,6 +8,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #938883;
 }
 .container{
     display: flex;
@@ -15,29 +16,65 @@ body{
     /* justify-content: center; */
     width: 80vw;
     min-height: 60vh;
-    background-color: blueviolet;
+    background-image: url(pexels-herman-io-3569757.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 20px;
     padding: 25px;
+    margin-top: 40px;
+    box-shadow: 15px 15px 15px 15px #023463;
 }
+h1{
+    font-size: large;
+}
+.mytasks{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
 #todoInput{
+    width: 80%;
     height: 25px;
     margin-bottom: 30px;
+    outline: none;
 }
 #submit{
     height: 30px;
     width: 40px;
+    background-color: #023a72;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 #todoList{
-    display: flex;
-    align-items: column;
+    list-style: none;
 }
 #statusText{
     padding: 8px;
     text-align: center;
     color: black;
+    font-weight: 600;
 }
-/*
-ul li{
+
+.todo-item {
+    background: #fff;
+    color: black;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+/* ul{
+    display: flex;
+    flex-direction: column;
     list-style: none;
     background-color: aliceblue;
     width: 150px;
