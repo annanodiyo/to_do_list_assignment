@@ -8,7 +8,7 @@ const todoInput = document.getElementById('todoInput');
 const todoList = document.getElementById('todoList');
 const statusText = document.getElementById('statusText');
 const addTaskbtn = document.getElementById('submit');
-addTaskbtn.addEventListener('click',addTodo);
+// addTaskbtn.addEventListener('click',addTodo);
 todoForm.addEventListener('submit', function(e){
   e.preventDefault();
   addTodo();
@@ -24,15 +24,21 @@ function renderTodos() {
       }
       const tasknext = document.createElement("input");
       tasknext.type="checkbox";
-      tasknext.next = todo.done;
+      tasknext.checked = todo.done;
       tasknext.addEventListener("change", () => toggleDone(todo.id));
 
+      const editButton = document.createElement("button");
+      editButton.textContet ="Edit";
+      editButton.addEventListener('click', () => editTodoText(todo.id));
+      // li.appendChild(editButton);
+
       li.appendChild(tasknext);
+
       const span=document.createElement('span');
       span.textContent = todo.text;
       li.appendChild(span);
 
-      li.innerHTML = todo.text;
+      // li.innerHTML = todo.text;
       todoList.appendChild(li);
   }));
   showStatus();
@@ -56,7 +62,7 @@ if (pending === 0) {
 
 function addTodo() {
 const newTodoText = todoInput.value.trim();
-if (!newTodoText) {
+if (newTodoText ==="") {
   alert("Please enter a valid todo item");
   return;
 }
