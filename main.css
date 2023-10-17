@@ -49,13 +49,18 @@ form>button{
     border-radius: 5px;
     cursor: pointer;
 }
+.todo-contaainer{
+    background-color: antiquewhite;
+    border: 2px sold black;
+    width: 100%;
+}
 #todoList{
     list-style: none;
 }
 #statusText{
     padding: 8px;
     text-align: center;
-    color: black;
+    color: white;
     font-weight: 600;
 }
 
