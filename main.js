@@ -1,7 +1,7 @@
 const todos = [
-  { id: 1, text: 'eat pizza', done: false},
+  /*{ id: 1, text: 'eat pizza', done: false},
   { id: 2, text: 'eat mango', done: false},
-  { id: 3, text: 'eat pineapple', done: false}
+  */
 ];
 const todoForm=document.querySelector('.mytasks');
 const todoInput = document.getElementById('todoInput');
@@ -82,12 +82,17 @@ todoInput.value = "";
 }
 
 function toggleDone(id) {
-const todo = todos.find((todo) => todo.id === id);
-todo.done = !todo.done;
+const index = todos.findIndex((todo) => todo.id === id);
+todos[index].done = !todos[index].done;
+
+if(todos[index].done){
+  todos.splice(index,1)
+}
 
 saveTodos();
 renderTodos();
 }
+
 
 function removeTodo(id) {
 const todoIndex = todos.findIndex((todo) => todo.id === id);
