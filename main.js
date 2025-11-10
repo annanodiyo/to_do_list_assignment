@@ -3,16 +3,28 @@ const todos = [
   { id: 2, text: 'eat mango', done: false},
   */
 ];
+const doneTodo = [
+
+]
 const todoForm=document.querySelector('.mytasks');
 const todoInput = document.getElementById('todoInput');
 const todoList = document.getElementById('todoList');
 const statusText = document.getElementById('statusText');
 const addTaskbtn = document.getElementById('submit');
 // addTaskbtn.addEventListener('click',addTodo);
+class Todo {
+  constructor(id, text, done = false) {
+    this.id = id;
+    this.text = text;
+    this.done = done;
+  }
+}
+
 todoForm.addEventListener('submit', function(e){
   e.preventDefault();
   addTodo();
 });
+//creating an instance of Todo class
 
 function renderTodos() {
   todoList.innerHTML = "";
@@ -27,10 +39,11 @@ function renderTodos() {
       tasknext.checked = todo.done;
       tasknext.addEventListener("change", () => toggleDone(todo.id));
 
-      const editButton = document.createElement("button");
+    /*  const editButton = document.createElement("button");
       editButton.textContet ="Edit";
       editButton.addEventListener('click', () => editTodoText(todo.id));
-      // li.appendChild(editButton);
+     // li.appendChild(editButton);
+     */
 
       li.appendChild(tasknext);
 
@@ -66,14 +79,8 @@ if (newTodoText ==="") {
   alert("Please enter a valid todo item");
   return;
 }
-
-const newTodo = {
-  id: todos.length + 1,
-  text: newTodoText,
-  done: false,
-};
-
-todos.unshift(newTodo);
+const todoItem = new Todo(Date.now(),newTodoText)
+todos.unshift(todoItem);
 
 saveTodos();
 renderTodos();
@@ -86,7 +93,7 @@ const index = todos.findIndex((todo) => todo.id === id);
 todos[index].done = !todos[index].done;
 
 if(todos[index].done){
-  todos.splice(index,1)
+  const doneTodo = todos.splice(index,1)
 }
 
 saveTodos();
