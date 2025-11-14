@@ -13,12 +13,10 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     width: 80vw;
     min-height: 60vh;
     background-image: url(pexels-herman-io-3569757.jpg);
     background-size: contain;
-    /* background-repeat: no-repeat; */
     border-radius: 20px;
     padding: 25px;
     margin-top: 40px;
@@ -53,6 +51,12 @@ form>button{
     background-color: antiquewhite;
     border: 2px sold black;
     width: 100%;
+}
+#items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 55%;
 }
 #todoList{
     list-style: none;

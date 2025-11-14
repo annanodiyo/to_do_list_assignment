@@ -9,14 +9,27 @@
   <body>
     <h1>Do List 2023</h1>
     <div class="container">
-      <form class="mytasks">
+      <form autocomplete="off" class="mytasks">
         <input id="todoInput" placeholder="What is your plan?" />
         <button id="submit">+</button>
       </form>
       <div id="statusText"></div>
-      <ul id="todoList">
-        <li>hello</li>
-      </ul>
+      <div id="items">
+         <div>
+           <h3>To-do</h3>
+
+        <ul id="todoList">
+          <!-- <li>hello</li> -->
+        </ul>
+        </div>
+<div>
+ <h3>completed tasks</h3>
+
+        <ul id="complete-todo">
+        </ul>
+</div>
+
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
